@@ -1,5 +1,7 @@
 cd sub1
-mvn install
-java -jar target/sub1-1.0-SNAPSHOT.jar
+mvn clean install
+echo "install done"
+java -jar target/test4.jar
+echo "sub1 done"
 cd ..
 
