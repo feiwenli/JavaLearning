@@ -1,3 +1,2 @@
-# java 基础考试
-- 运行步骤
-	- 点击运行 build.sh
+# java Demo
+# 日常学习笔记
