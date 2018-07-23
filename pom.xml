@@ -13,6 +13,7 @@
     <module>socket</module>
       <module>JDBCDemo</module>
     <module>jdbc</module>
+      <module>regex</module>
   </modules>
 
   <name>test99</name>
