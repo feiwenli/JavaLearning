@@ -2,4 +2,5 @@
 /sub1/target/
 /socket/target/
 /jdbc/target/
+/regex/target/
 *.iml
