@@ -4,15 +4,18 @@ import java.io.*;
 import java.net.ConnectException;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.Scanner;
 
 public class TCPClientDemo {
     public static void main (String[] args){
         try {
             Socket s = new Socket("127.0.0.1",12345);
+            Scanner in = new Scanner(System.in);
+            String str = in.next();
+
             OutputStream os = s.getOutputStream();
             DataOutputStream dos = new DataOutputStream(os);
-            dos.writeUTF("Hello,server!");
-            dos.writeUTF("Bye~");
+            dos.writeUTF(str);
 
             InputStream is = s.getInputStream();
             DataInputStream dis = new DataInputStream (is);

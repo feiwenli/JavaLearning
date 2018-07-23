@@ -11,7 +11,12 @@ public class TCPServerDemo {
                 Socket s = ss.accept();
                 System.out.println("connected!");
                 DataInputStream dis = new DataInputStream(s.getInputStream());
-                System.out.println(dis.readUTF());
+
+                String line;
+                while ((line = dis.readUTF())!="exit") {
+                    System.out.println(line);
+                }
+
                 OutputStream os = s.getOutputStream();
                 DataOutputStream dos = new DataOutputStream	(os);
                 dos.writeUTF("Hello , "+s.getInetAddress()+" ports "+s.getPort());

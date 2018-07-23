@@ -1,4 +1,5 @@
 /.idea/
 /sub1/target/
 /socket/target/
+/jdbc/target/
 *.iml

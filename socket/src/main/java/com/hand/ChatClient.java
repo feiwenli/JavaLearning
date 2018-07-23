@@ -1,26 +1,37 @@
 package com.hand;
 
-import java.io.*;
+import java.io.DataOutputStream;
+import java.io.IOException;
 import java.net.*;
+import java.util.Scanner;
 
 public class ChatClient {
+
     public static void main(String[]args){
         try{
             Socket s = new Socket("127.0.0.1",12345);
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            PrintWriter pw = new PrintWriter(s.getOutputStream());
-//            BufferedReader bbrr = new BufferedReader(new InputStreamReader(s.getInputStream()));
-//            System.out.println("Server:"+br.readLine());
-            while(br.readLine()!="exit"){
-                pw.print(br.readLine());
-//                pw.flush();
-//                System.out.println("Server:"+bbrr.readLine());
-                System.out.println("Client:"+br.readLine());
-            }
-            br.close();
-            pw.close();
-//            bbrr.close();
-            s.close();
+            DataOutputStream dos = new DataOutputStream(s.getOutputStream());
+
+            dos.writeUTF("success");
+            dos.flush();
+//            Scanner reader = new Scanner(System.in);
+
+//            String line;
+
+//            while (reader.hasNext()){
+//                line = reader.next();
+//                System.out.println("client: "+line);
+//                writer.write(line);
+//                writer.write("101010");
+//                writer.flush();
+//
+//            }
+//
+//            reader.close();
+
+            dos.close();
+
+
         }catch (IOException e){
             e.printStackTrace();
         }
