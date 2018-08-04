@@ -3,4 +3,7 @@
 /socket/target/
 /jdbc/target/
 /regex/target/
+/beanLife/target/
+/mybatis/target/
+/spring/target/
 *.iml

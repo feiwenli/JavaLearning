@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id = "helloWorld" class="com.hand.HelloWorld">
+        <property name="message1" value="Hello World message 1"></property>
+        <property name="message2" value="Hello World message 2"></property>
+    </bean>
+    <bean id = "helloChina" class="com.hand.HelloChina">
+        <property name="message1" value="Hello China message 1"></property>
+        <property name="message2" value="Hello China message 2"></property>
+        <property name="message3" value="Hello China message 3"></property>
+    </bean>
+    <bean id = "person" class="com.hand.Person">
+        <property name="helloMessage" ref="helloChina"></property>
+    </bean>
+
+    <bean id="javaCollection" class = "com.hand.JavaCollection">
+        <property name="addressList">
+            <list>
+                <value>india</value>
+                <value>pakistan</value>
+                <value>usa</value>
+                <value>usa</value>
+            </list>
+        </property>
+
+        <property name="addressMap">
+            <map>
+                <entry key="1" value="india"></entry>
+                <entry key="2" value="pakistan"></entry>
+                <entry key="3" value="usa"></entry>
+                <entry key="4" value="usa"></entry>
+            </map>
+        </property>
+
+        <property name="addressProp">
+            <props>
+                <prop key="one">india</prop>
+                <prop key="two">pakistan</prop>
+                <prop key="three">usa</prop>
+                <prop key="four">usa</prop>
+            </props>
+        </property>
+
+        <property name="addressSet">
+            <set>
+                <value>india</value>
+                <value>pakistan</value>
+                <value>usa</value>
+                <value>usa</value>
+            </set>
+        </property>
+
+    </bean>
+
+</beans>

@@ -11,9 +11,12 @@
   <modules>
     <module>sub1</module>
     <module>socket</module>
-      <module>JDBCDemo</module>
     <module>jdbc</module>
       <module>regex</module>
+      <module>spring</module>
+      <module>reflect</module>
+      <module>beanLifeCycle</module>
+      <module>mybatis</module>
   </modules>
 
   <name>test99</name>
